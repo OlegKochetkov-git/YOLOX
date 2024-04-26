@@ -1,0 +1,5 @@
+
+Train start: python tools/train.py -f exps/example/custom/nano.py -d 1 -b 2 --fp16 -o -c yolox_nano.pth
+Demo weight start: python tools/demo.py image -f exps/example/custom/nano.py -c best_ckpt.pth --path 1.jpg --conf 0.25 --nms 0.45 --tsize 416 --save_result --device cpu
+ONNX start: python demo/ONNXRuntime/onnx_inference.py -m your_yolox.onnx -i 1.jpg -o resultOnnx -s 0.3 --input_shape 416,416
+ORT start: python demo/ONNXRuntime/onnx_inference.py -m your_yolox_Fixed.ort -i 1.jpg -o resultOnnx -s 0.3 --input_shape 416,416

@@ -211,6 +211,7 @@ docs/api
 *.pth
 *.onnx
 *.engine
+*.ort
 events.out.tfevents*
 
 # vscode
